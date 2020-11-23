@@ -6,6 +6,7 @@ import "./Homescreen.scss";
 //components
 import Navbar from "../../components/Navbar/Navbar";
 import Banner from "../../components/Banner/Banner";
+import OnlineClasses from "../../components/OnlineClasssList/OnlineClassList";
 
 const Homescreen = () => {
 	useEffect(() => {
@@ -33,9 +34,9 @@ const Homescreen = () => {
 			<div class="overlay first"></div>
 			<div class="overlay second"></div>
 			<div class="overlay third"></div>
-
 			<Navbar />
 			<Banner />
+			<OnlineClasses />
 		</div>
 	);
 };

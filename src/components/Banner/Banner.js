@@ -58,9 +58,11 @@ const Banner = () => {
 				</a>
 			</div>
 
-			<div class="img-1"></div>
+			<div className="image">
+				<div class="img-1"></div>
 
-			<div class="img-2"></div>
+				<div class="img-2"></div>
+			</div>
 		</div>
 	);
 };
