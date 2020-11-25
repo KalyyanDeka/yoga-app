@@ -1,69 +1,252 @@
-ul {
+.navbar {
+	position: fixed;
+	background-color: #23232e;
+	transition: width 600ms ease;
+	overflow: hidden;
+	z-index: 1000;
+}
+
+.navbar-nav {
 	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
 }
 
-img {
+.nav-item {
 	width: 100%;
-	height: auto;
-	z-index: -1;
 }
 
-.nav {
-	//position: fixed;
-	width: 100%;
-	height: 100px;
-	z-index: 1;
+.nav-item:last-child {
+	margin-top: auto;
 }
 
-.border-bottom {
-	position: absolute;
-	top: 100px;
-	width: 0%;
-	z-index: 1;
-	border-color: rgba(255, 255, 255, 0.2);
-	border-width: 0.5px;
+.nav-link {
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	color: #b6b6b6;
+	text-decoration: none;
+	filter: grayscale(100%) opacity(0.7);
+	transition: 600ms;
 }
 
-.logo,
-.menu-links,
-.search,
-.cart {
-	position: absolute;
-	padding: 20px;
+.nav-link:hover {
+	filter: grayscale(0%) opacity(1);
+	background: #141418;
+	color: #ececec;
+}
+
+.link-text {
+	display: none;
+	margin-left: 1rem;
+}
+
+.nav-link svg {
+	width: 2rem;
+	min-width: 2rem;
+	margin: 0 1.5rem;
+}
+
+.fa-primary {
+	color: #ffffff;
+}
+
+.fa-secondary {
+	color: #ffffff;
+}
+
+.fa-primary,
+.fa-secondary {
+	transition: 600ms;
 }
 
 .logo {
-	width: 100px;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+	text-align: center;
+	color: #ececec;
+	background: #141418;
+	font-size: 1.5rem;
+	letter-spacing: 0.3ch;
+	width: 100%;
 }
 
-.menu-links {
-	// left: 100px;
-	line-height: 1;
-	margin-left: 30px;
-	cursor: pointer;
+.logo svg {
+	transform: rotate(0deg);
+	transition: 600ms;
 }
 
-.menu-links ul li {
-	display: inline-block;
-	padding: 20px 30px;
-	color: rgba(255, 255, 255, 0.5);
-	transition: all 0.4s;
+.logo-text {
+	display: inline;
+	position: absolute;
+	left: -999px;
+	transition: 600ms;
+}
 
-	&:hover {
-		color: rgb(255, 255, 255);
+.navbar:hover .logo svg {
+	transform: rotate(-180deg);
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+	.navbar {
+		bottom: 0;
+		width: 100vw;
+		height: 5rem;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.navbar-nav {
+		flex-direction: row;
+	}
+
+	.nav-link {
+		justify-content: center;
+	}
+
+	main {
+		margin: 0;
 	}
 }
 
-.search,
-.cart {
-	line-height: 3;
-	font-size: 20px;
+/* Large screens */
+@media only screen and (min-width: 600px) {
+	.navbar {
+		top: 0;
+		width: 5rem;
+		height: 100vh;
+	}
+
+	.navbar:hover {
+		width: 16rem;
+	}
+
+	.navbar:hover .link-text {
+		display: inline;
+	}
+
+	.navbar:hover .logo svg {
+		margin-left: 11rem;
+	}
+
+	.navbar:hover .logo-text {
+		left: 0px;
+	}
 }
 
-.search {
-	right: 150px;
+.dark {
+	--text-primary: #b6b6b6;
+	--text-secondary: #ececec;
+	--bg-primary: #23232e;
+	--bg-secondary: #141418;
 }
 
-.cart {
-	right: 50px;
+.light {
+	--text-primary: #1f1f1f;
+	--text-secondary: #000000;
+	--bg-primary: #ffffff;
+	--bg-secondary: #e4e4e4;
 }
+
+.solar {
+	--text-primary: #576e75;
+	--text-secondary: #35535c;
+	--bg-primary: #fdf6e3;
+	--bg-secondary: #f5e5b8;
+}
+
+.theme-icon {
+	display: none;
+}
+
+.dark #darkIcon {
+	display: block;
+}
+
+.light #lightIcon {
+	display: block;
+}
+
+.solar #solarIcon {
+	display: block;
+}
+
+// .nav {
+// 	display: flex;
+// 	justify-content: space-between;
+
+// 	flex-grow: 1;
+// 	margin: 0 auto;
+// 	position: relative;
+// 	width: auto;
+// 	height: 100%;
+
+// 	max-width: 1152px;
+
+// 	@media (max-width: 1024px) {
+// 		max-width: 960px;
+// 	}
+// 	@media (max-width: 900px) {
+// 		max-width: 720px;
+// 	}
+
+// 	@media (max-width: 480px) {
+// 		max-width: 330px;
+// 	}
+// 	width: 100%;
+// 	height: 100px;
+// 	z-index: 1;
+// }
+
+// .icons {
+// 	display: flex;
+// }
+
+// .border-bottom {
+// 	top: 100px;
+// 	width: 0%;
+// 	z-index: 1;
+// 	border-color: rgba(255, 255, 255, 0.2);
+// 	border-width: 0.5px;
+// }
+
+// .logo,
+// .menu-links,
+// .search,
+// .cart {
+// 	padding: 20px;
+// }
+
+// .logo {
+// 	width: 100px;
+// }
+
+// .menu-links {
+// 	line-height: 1;
+// 	cursor: pointer;
+// }
+
+// .menu-links ul li {
+// 	display: inline-block;
+// 	padding: 20px 30px;
+// 	color: rgba(255, 255, 255, 0.5);
+// 	transition: all 0.4s;
+
+// 	&:hover {
+// 		color: rgb(255, 255, 255);
+// 	}
+// }
+
+// .search,
+// .cart {
+// 	line-height: 3;
+// 	font-size: 20px;
+// }

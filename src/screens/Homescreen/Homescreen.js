@@ -7,6 +7,7 @@ import "./Homescreen.scss";
 import Navbar from "../../components/Navbar/Navbar";
 import Banner from "../../components/Banner/Banner";
 import OnlineClasses from "../../components/OnlineClasssList/OnlineClassList";
+import { listEvents } from "../../store/actions/eventActions";
 
 const Homescreen = () => {
 	useEffect(() => {

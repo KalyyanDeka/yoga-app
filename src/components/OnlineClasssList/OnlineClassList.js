@@ -107,7 +107,7 @@ const OnlineClassList = () => {
 					</div>
 				</article>
 
-				<article class="card">
+				{/* <article class="card">
 					<header class="card-header">
 						<p>Sep 11th 2020</p>
 						<h2>Card Tricks are fun!</h2>
@@ -180,7 +180,7 @@ const OnlineClassList = () => {
 						<a href="#">html</a>
 						<a href="#">css</a>
 					</div>
-				</article>
+				</article> */}
 			</section>
 		</div>
 	);

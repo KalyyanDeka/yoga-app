@@ -43,25 +43,27 @@ const Banner = () => {
 		});
 	}, []);
 	return (
-		<div class="container">
-			<div class="text">
-				<h1 class="title">
-					YOGA FOR <br />
-					<span className="title-span">EVERYONE</span>
-				</h1>
-				<p class="desc">
-					“Yoga is the journey of the self, through the self, to the self.”
-					<br /> ― The Bhagavad Gita .
-				</p>
-				<a href="#" class="readmore">
-					Scroll For More
-				</a>
-			</div>
+		<div className="banner">
+			<div class="container">
+				<div class="text">
+					<h1 class="title">
+						YOGA FOR <br />
+						<span className="title-span">EVERYONE</span>
+					</h1>
+					<p class="desc">
+						“Yoga is the journey of the self, through the self, to the self.”
+						<br /> ― The Bhagavad Gita .
+					</p>
+					<a href="#" class="readmore">
+						Scroll For More
+					</a>
+				</div>
 
-			<div className="image">
-				<div class="img-1"></div>
+				<div className="image">
+					<div class="img-1"></div>
 
-				<div class="img-2"></div>
+					<div class="img-2"></div>
+				</div>
 			</div>
 		</div>
 	);
