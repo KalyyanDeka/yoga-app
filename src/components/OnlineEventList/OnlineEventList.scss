@@ -1,0 +1,10 @@
+.onlineClass {
+	margin-top: 120px;
+	margin-left: 50px;
+	text-align: center;
+
+	@media (max-width: 480px) {
+		margin-left: 0px;
+		margin-top: 180px;
+	}
+}

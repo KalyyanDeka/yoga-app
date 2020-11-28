@@ -1,4 +1,5 @@
 import "./App.scss";
+import React from "react";
 
 // screens
 import Homescreen from "./screens/Homescreen/Homescreen";

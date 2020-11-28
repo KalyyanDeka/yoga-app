@@ -1,9 +1,3 @@
-.onlineClass {
-	margin-top: 120px;
-	margin-left: 50px;
-	text-align: center;
-}
-
 .heading {
 	color: rgba(255, 255, 255, 0.5);
 	display: inline-block;
@@ -12,6 +6,11 @@
 
 a {
 	text-decoration: none;
+}
+
+.card-image {
+	height: 200px;
+	width: 300px;
 }
 
 .card-list {
@@ -42,10 +41,10 @@ a {
 }
 
 .card {
-	height: 350px;
-	width: 400px;
-	min-width: 250px;
-	padding: 1.5rem;
+	// height: 350px;
+	width: min-content;
+	// min-width: 250px;
+	padding: 1rem;
 	border-radius: 16px;
 	background: #17141d;
 	box-shadow: -1rem 0 3rem #000;
@@ -53,9 +52,10 @@ a {
 	flex-direction: column;
 	transition: 0.2s;
 	margin: 0;
-	scroll-snap-align: start;
+	scroll-snap-align: center;
 	clear: both;
 	position: relative;
+	text-align: start;
 }
 
 .card:focus-within ~ .card,
@@ -72,18 +72,18 @@ a {
 }
 
 .card-header {
-	margin-bottom: auto;
+	margin-bottom: 20px;
 }
 
 .card-header p {
 	font-size: 14px;
-	margin: 0 0 1rem;
+	// margin: 0 0 1rem;
 	color: #7a7a8c;
 }
 
 .card-header h2 {
 	font-size: 20px;
-	margin: 0.25rem 0 auto;
+	// margin: 0.25rem 0 auto;
 	text-decoration: none;
 	color: inherit;
 	border: 0;
@@ -100,7 +100,7 @@ a {
 }
 
 .card-author {
-	margin: 3rem 0 0;
+	margin-top: 10px;
 	display: grid;
 	grid-template-columns: 75px 1fr;
 	align-items: center;
@@ -118,7 +118,7 @@ a {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
-	filter: grayscale(100%);
+	// filter: grayscale(100%);
 	display: block;
 	overflow: hidden;
 	margin: 16px 10px;
@@ -132,7 +132,7 @@ a {
 .author-name-prefix {
 	font-style: normal;
 	font-weight: 700;
-	color: #7a7a8c;
+	// color: #7a7a8c;
 }
 
 .half-circle {
@@ -149,7 +149,7 @@ a {
 }
 
 .tags {
-	margin: 1rem 0 2rem;
+	margin: 0rem 0 2rem;
 	padding: 0.5rem 0 1rem;
 	line-height: 2;
 	margin-bottom: 0;
@@ -164,7 +164,7 @@ a {
 	font-size: 0.66rem;
 	border: 3px solid #28242f;
 	border-radius: 2rem;
-	padding: 0.2rem 0.85rem 0.25rem;
+	padding: 0.5rem 0.85rem 0.25rem;
 	position: relative;
 }
 
